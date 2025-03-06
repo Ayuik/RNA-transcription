@@ -25,8 +25,8 @@ public class DNATest {
         dna.setDNAstrand(nucleotides.C);
         dna.setDNAstrand(nucleotides.T);
         dna.setDNAstrand(nucleotides.A);
-        assertThat(dna.dnaStrand, contains(nucleotides.G, nucleotides.C, nucleotides.T, nucleotides.A));
-        assertThat(dna.dnaStrand, hasSize (4));
+        assertThat(dna.getDNAstrand(), contains(nucleotides.G, nucleotides.C, nucleotides.T, nucleotides.A));
+        assertThat(dna.getDNAstrand(), hasSize (4));
     }
 
     @Test

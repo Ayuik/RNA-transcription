@@ -6,7 +6,7 @@ import java.util.List;
 import dev.ayelen.rnatranscription.enums.nucleotides;
 
 public class DNA {
-    List<nucleotides> dnaStrand = new ArrayList<>();
+    protected List<nucleotides> dnaStrand = new ArrayList<>();
 
     public DNA() {
         this.dnaStrand = dnaStrand;
