@@ -15,4 +15,10 @@ public class DNA {
     public void setDNAstrand(nucleotides nucleotide) {
         dnaStrand.add(nucleotide);
     }
+
+    public List<nucleotides> getDNAstrand() {
+        return dnaStrand;
+    }
+
+    
 }
