@@ -28,7 +28,7 @@ public class DNATest {
         assertThat(dna.getDNAstrand(), contains(nucleotides.G, nucleotides.C, nucleotides.T, nucleotides.A));
         assertThat(dna.getDNAstrand(), hasSize (4));
     }
-
+    
     @Test
     void testGetDNAstrand(){
         List<nucleotides> myDNA = dna.getDNAstrand();
