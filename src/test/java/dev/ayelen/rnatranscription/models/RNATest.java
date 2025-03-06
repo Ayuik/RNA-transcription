@@ -27,7 +27,7 @@ public class RNATest {
     void testProvideRNAStrand() {
         dna.setDNAstrand(nucleotides.G);
         List<nucleotides> rnaStrand = new ArrayList<>();
-        rnaStrand = rna.provideRNAstrand();
+        rnaStrand = rna.provideRNAstrand(dna.getDNAstrand());
         assertThat(rnaStrand, contains (nucleotides.C));
     }
     
