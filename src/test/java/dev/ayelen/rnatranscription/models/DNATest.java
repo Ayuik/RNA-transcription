@@ -15,7 +15,7 @@ public class DNATest {
 
     @BeforeEach
     void setUp(){
-        DNA dna = new DNA();
+        dna = new DNA();
     }
 
 
@@ -32,7 +32,8 @@ public class DNATest {
     @Test
     void testGetDNAstrand(){
         List<nucleotides> myDNA = dna.getDNAstrand();
-        assertThat(dna.dnaStrand, hasSize (4));
+        dna.setDNAstrand(nucleotides.A);
+        assertThat(myDNA, hasSize (1));
     }
     
 }
