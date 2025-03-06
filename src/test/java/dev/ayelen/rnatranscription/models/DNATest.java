@@ -15,13 +15,12 @@ public class DNATest {
     @Test
     void testDNA() {
         DNA dna = new DNA();
-        List<nucleotides> DNAstrand = new ArrayList<>();
-        dna.setRNAstrand(nucleotides.G);
-        dna.setRNAstrand(nucleotides.C);
-        dna.setRNAstrand(nucleotides.T);
-        dna.setRNAstrand(nucleotides.A);
-        assertThat(DNAstrand, contains (nucleotides.G));
-        assertThat(DNAstrand, hasSize (4));
+        dna.setDNAstrand(nucleotides.G);
+        dna.setDNAstrand(nucleotides.C);
+        dna.setDNAstrand(nucleotides.T);
+        dna.setDNAstrand(nucleotides.A);
+        assertThat(dna.dnaStrand, contains(nucleotides.G, nucleotides.C, nucleotides.T, nucleotides.A));
+        assertThat(dna.dnaStrand, hasSize (4));
     }
     
 }
