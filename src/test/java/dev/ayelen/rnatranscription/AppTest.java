@@ -1,4 +1,4 @@
-package dev.mabel.test_java;
+package dev.ayelen.rnatranscription;
 
 import org.junit.jupiter.api.Test;
 

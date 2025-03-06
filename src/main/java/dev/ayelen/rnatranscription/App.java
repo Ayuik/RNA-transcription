@@ -1,4 +1,5 @@
-package dev.mabel.template_java;
+package dev.ayelen.rnatranscription;
+
 public final class App {
     private App() {}
 
