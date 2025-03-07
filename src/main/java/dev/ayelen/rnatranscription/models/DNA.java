@@ -13,6 +13,9 @@ public class DNA {
     }
 
     public void setDNAstrand(nucleotides nucleotide) {
+        if (nucleotide == nucleotides.U){
+            return;
+        }
         dnaStrand.add(nucleotide);
     }
 
