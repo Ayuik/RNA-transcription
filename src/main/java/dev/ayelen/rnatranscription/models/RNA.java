@@ -9,15 +9,21 @@ public class RNA {
     List<nucleotides> rnaStrand = new ArrayList<>();
     
     public List<nucleotides> provideRNAstrand (List<nucleotides> dnaStrand){
-        dnaStrand.iterator();
-        if (dnaStrand.contains(nucleotides.G)){
-            rnaStrand.add(nucleotides.C);
-        } else if (dnaStrand.contains(nucleotides.C)){
-            rnaStrand.add(nucleotides.G);
-        } else if (dnaStrand.contains(nucleotides.T)){
-            rnaStrand.add(nucleotides.A);
-        } else if (dnaStrand.contains(nucleotides.A)){
-            rnaStrand.add(nucleotides.U);
+        for (nucleotides nucleotide : dnaStrand) {
+            switch (nucleotide) {
+                case G:
+                    rnaStrand.add(nucleotides.C);
+                    break;
+                case C:
+                    rnaStrand.add(nucleotides.G);
+                    break;
+                case T:
+                    rnaStrand.add(nucleotides.A);
+                    break;
+                case A:
+                    rnaStrand.add(nucleotides.U);
+                    break;
+            }
         }
         return rnaStrand;
     }
