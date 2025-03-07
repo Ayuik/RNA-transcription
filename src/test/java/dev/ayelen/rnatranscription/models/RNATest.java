@@ -40,5 +40,13 @@ public class RNATest {
         rnaStrand = rna.provideRNAstrand(dna.getDNAstrand());
         assertThat(rnaStrand, contains (nucleotides.G));
     }
+
+    @Test
+    @DisplayName ("should return A as a complement to T")
+    void testProvideRNAStrandReturnsA() {
+        dna.setDNAstrand(nucleotides.T);
+        rnaStrand = rna.provideRNAstrand(dna.getDNAstrand());
+        assertThat(rnaStrand, contains (nucleotides.A));
+    }
     
 }
