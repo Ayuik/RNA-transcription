@@ -15,18 +15,20 @@ import dev.ayelen.rnatranscription.enums.nucleotides;
 public class RNATest {
     RNA rna;
     DNA dna;
+    List<nucleotides> rnaStrand;
+
 
     @BeforeEach
     void setUp(){
         dna = new DNA();
         rna = new RNA();
+        rnaStrand = new ArrayList<>();
     }
 
     @Test
     @DisplayName ("should return C as a complement to G")
     void testProvideRNAStrandReturnsC() {
         dna.setDNAstrand(nucleotides.G);
-        List<nucleotides> rnaStrand = new ArrayList<>();
         rnaStrand = rna.provideRNAstrand(dna.getDNAstrand());
         assertThat(rnaStrand, contains (nucleotides.C));
     }
@@ -35,7 +37,6 @@ public class RNATest {
     @DisplayName ("should return G as a complement to C")
     void testProvideRNAStrandReturnsG() {
         dna.setDNAstrand(nucleotides.C);
-        List<nucleotides> rnaStrand = new ArrayList<>();
         rnaStrand = rna.provideRNAstrand(dna.getDNAstrand());
         assertThat(rnaStrand, contains (nucleotides.G));
     }

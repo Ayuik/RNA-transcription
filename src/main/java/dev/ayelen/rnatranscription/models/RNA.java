@@ -12,6 +12,8 @@ public class RNA {
         dnaStrand.iterator();
         if (dnaStrand.contains(nucleotides.G)){
             rnaStrand.add(nucleotides.C);
+        } else if (dnaStrand.contains(nucleotides.C)){
+            rnaStrand.add(nucleotides.G);
         }
         return rnaStrand;
         }
