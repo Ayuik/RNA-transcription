@@ -24,11 +24,20 @@ public class RNATest {
 
     @Test
     @DisplayName ("should return C as a complement to G")
-    void testProvideRNAStrand() {
+    void testProvideRNAStrandReturnsC() {
         dna.setDNAstrand(nucleotides.G);
         List<nucleotides> rnaStrand = new ArrayList<>();
         rnaStrand = rna.provideRNAstrand(dna.getDNAstrand());
         assertThat(rnaStrand, contains (nucleotides.C));
+    }
+
+    @Test
+    @DisplayName ("should return G as a complement to C")
+    void testProvideRNAStrandReturnsG() {
+        dna.setDNAstrand(nucleotides.C);
+        List<nucleotides> rnaStrand = new ArrayList<>();
+        rnaStrand = rna.provideRNAstrand(dna.getDNAstrand());
+        assertThat(rnaStrand, contains (nucleotides.G));
     }
     
 }
