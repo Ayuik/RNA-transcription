@@ -16,6 +16,8 @@ public class RNA {
             rnaStrand.add(nucleotides.G);
         } else if (dnaStrand.contains(nucleotides.T)){
             rnaStrand.add(nucleotides.A);
+        } else if (dnaStrand.contains(nucleotides.A)){
+            rnaStrand.add(nucleotides.U);
         }
         return rnaStrand;
     }

@@ -4,7 +4,8 @@ public enum nucleotides {
     A("ADENINE"),
     C("CYTOSINE"),
     G("GUANINE"),
-    T("THYMINE");
+    T("THYMINE"),
+    U("URACIL");
 
     public final String nuc;
 
